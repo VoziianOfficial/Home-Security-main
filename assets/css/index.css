@@ -1244,12 +1244,17 @@
 .scenario-card__text {
     max-width: 440px;
 
+    height: 64px;
+
     margin: 0;
 
     color:
         rgba(255, 255, 255, 0.62);
 
     font-size: 13px;
+    line-height: 1.55;
+
+    overflow: hidden;
 
     opacity: 0;
 
