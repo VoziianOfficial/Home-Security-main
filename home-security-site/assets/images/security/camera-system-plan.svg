@@ -1,0 +1,491 @@
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 900 620"
+    fill="none"
+    role="img"
+    aria-labelledby="cameraPlanTitle cameraPlanDesc"
+>
+    <title id="cameraPlanTitle">
+        Residential Camera Coverage Plan
+    </title>
+
+    <desc id="cameraPlanDesc">
+        Architectural residential plan showing camera positions,
+        entrances, driveway, rear garden and camera sight lines.
+    </desc>
+
+    <!-- PROPERTY -->
+    <rect
+        x="34"
+        y="34"
+        width="832"
+        height="552"
+        stroke="#B8B5AC"
+        stroke-width="2"
+    />
+
+    <!-- HOUSE -->
+    <path
+        d="M238 151H655V457H238Z"
+        fill="#FAF9F5"
+        stroke="#171A1B"
+        stroke-width="3"
+    />
+
+    <!-- INTERNAL WALLS -->
+    <path
+        d="M238 291H655"
+        stroke="#A6A39B"
+        stroke-width="2"
+    />
+
+    <path
+        d="M418 151V457"
+        stroke="#A6A39B"
+        stroke-width="2"
+    />
+
+    <path
+        d="M536 291V457"
+        stroke="#A6A39B"
+        stroke-width="2"
+    />
+
+    <!-- GARAGE -->
+    <rect
+        x="254"
+        y="170"
+        width="145"
+        height="102"
+        fill="#F2EFE6"
+        stroke="#171A1B"
+        stroke-width="2"
+    />
+
+    <path
+        d="M270 188H383M270 204H383M270 220H383M270 236H383"
+        stroke="#C89A27"
+        stroke-width="1.7"
+    />
+
+    <!-- FRONT ENTRY -->
+    <path
+        d="M452 457V490"
+        stroke="#171A1B"
+        stroke-width="4"
+    />
+
+    <path
+        d="M452 490H506"
+        stroke="#C89A27"
+        stroke-width="3"
+    />
+
+    <path
+        d="M506 490V457"
+        stroke="#171A1B"
+        stroke-width="4"
+    />
+
+    <!-- DRIVEWAY -->
+    <path
+        d="M72 586L162 173H238V272H181L112 586Z"
+        fill="#F2EFE6"
+        stroke="#C7C3B9"
+        stroke-width="2"
+    />
+
+    <path
+        d="M112 550L176 288"
+        stroke="#CEC9BE"
+        stroke-width="2"
+        stroke-dasharray="8 10"
+    />
+
+    <!-- REAR GARDEN -->
+    <rect
+        x="687"
+        y="102"
+        width="142"
+        height="324"
+        fill="#F6F3EA"
+        stroke="#B8B5AC"
+        stroke-width="2"
+    />
+
+    <path
+        d="M708 142C737 118 774 120 805 144"
+        stroke="#B8A764"
+        stroke-width="1.7"
+    />
+
+    <path
+        d="M705 205C739 179 774 182 810 207"
+        stroke="#B8A764"
+        stroke-width="1.7"
+    />
+
+    <path
+        d="M707 360C740 337 774 340 807 363"
+        stroke="#B8A764"
+        stroke-width="1.7"
+    />
+
+    <!-- SIDE PASSAGE -->
+    <path
+        d="M655 310H684V457H655"
+        fill="#F2EFE6"
+        stroke="#B8B5AC"
+        stroke-width="1.7"
+    />
+
+    <!-- WINDOWS -->
+    <path
+        d="M288 151H337"
+        stroke="#C89A27"
+        stroke-width="5"
+    />
+
+    <path
+        d="M460 151H510"
+        stroke="#C89A27"
+        stroke-width="5"
+    />
+
+    <path
+        d="M563 151H615"
+        stroke="#C89A27"
+        stroke-width="5"
+    />
+
+    <path
+        d="M238 333V384"
+        stroke="#C89A27"
+        stroke-width="5"
+    />
+
+    <path
+        d="M655 332V382"
+        stroke="#C89A27"
+        stroke-width="5"
+    />
+
+    <!-- CAMERA COVERAGE CONES -->
+    <path
+        d="M466 448L347 559L530 562Z"
+        fill="#EFC52E"
+        fill-opacity="0.09"
+        stroke="#C89A27"
+        stroke-width="1.5"
+        stroke-dasharray="7 8"
+    />
+
+    <path
+        d="M257 182L86 286L207 361Z"
+        fill="#EFC52E"
+        fill-opacity="0.08"
+        stroke="#C89A27"
+        stroke-width="1.5"
+        stroke-dasharray="7 8"
+    />
+
+    <path
+        d="M623 170L778 79L820 220Z"
+        fill="#EFC52E"
+        fill-opacity="0.08"
+        stroke="#C89A27"
+        stroke-width="1.5"
+        stroke-dasharray="7 8"
+    />
+
+    <path
+        d="M641 405L747 337L790 505Z"
+        fill="#751F2A"
+        fill-opacity="0.055"
+        stroke="#751F2A"
+        stroke-width="1.5"
+        stroke-dasharray="7 8"
+    />
+
+    <!-- CAMERA 1 FRONT -->
+    <g
+        transform="translate(455 432)"
+        stroke="#171A1B"
+        stroke-width="2"
+    >
+        <rect
+            x="0"
+            y="0"
+            width="25"
+            height="15"
+            rx="3"
+            fill="#FFFFFF"
+        />
+
+        <circle
+            cx="12"
+            cy="7.5"
+            r="4"
+        />
+
+        <path d="M25 4L35 1V14L25 11" />
+        <path d="M7 15V23" />
+    </g>
+
+    <!-- CAMERA 2 GARAGE -->
+    <g
+        transform="translate(245 165)"
+        stroke="#171A1B"
+        stroke-width="2"
+    >
+        <rect
+            x="0"
+            y="0"
+            width="25"
+            height="15"
+            rx="3"
+            fill="#FFFFFF"
+        />
+
+        <circle
+            cx="12"
+            cy="7.5"
+            r="4"
+        />
+
+        <path d="M25 4L35 1V14L25 11" />
+        <path d="M7 15V23" />
+    </g>
+
+    <!-- CAMERA 3 REAR -->
+    <g
+        transform="translate(608 154)"
+        stroke="#171A1B"
+        stroke-width="2"
+    >
+        <rect
+            x="0"
+            y="0"
+            width="25"
+            height="15"
+            rx="3"
+            fill="#FFFFFF"
+        />
+
+        <circle
+            cx="12"
+            cy="7.5"
+            r="4"
+        />
+
+        <path d="M25 4L35 1V14L25 11" />
+        <path d="M7 15V23" />
+    </g>
+
+    <!-- CAMERA 4 SIDE -->
+    <g
+        transform="translate(625 391)"
+        stroke="#171A1B"
+        stroke-width="2"
+    >
+        <rect
+            x="0"
+            y="0"
+            width="25"
+            height="15"
+            rx="3"
+            fill="#FFFFFF"
+        />
+
+        <circle
+            cx="12"
+            cy="7.5"
+            r="4"
+        />
+
+        <path d="M25 4L35 1V14L25 11" />
+        <path d="M7 15V23" />
+    </g>
+
+    <!-- CAMERA POSITION MARKS -->
+    <circle
+        cx="467"
+        cy="445"
+        r="20"
+        stroke="#C89A27"
+        stroke-width="1"
+        opacity="0.45"
+    />
+
+    <circle
+        cx="257"
+        cy="178"
+        r="20"
+        stroke="#C89A27"
+        stroke-width="1"
+        opacity="0.45"
+    />
+
+    <circle
+        cx="620"
+        cy="167"
+        r="20"
+        stroke="#C89A27"
+        stroke-width="1"
+        opacity="0.45"
+    />
+
+    <circle
+        cx="637"
+        cy="403"
+        r="20"
+        stroke="#751F2A"
+        stroke-width="1"
+        opacity="0.40"
+    />
+
+    <!-- TECHNICAL CONNECTIONS -->
+    <path
+        d="M467 445L538 375L620 167"
+        stroke="#8D8C87"
+        stroke-width="1.2"
+        stroke-dasharray="4 7"
+    />
+
+    <path
+        d="M257 178L335 327L467 445"
+        stroke="#8D8C87"
+        stroke-width="1.2"
+        stroke-dasharray="4 7"
+    />
+
+    <path
+        d="M637 403L538 375"
+        stroke="#751F2A"
+        stroke-width="1.2"
+        stroke-dasharray="4 7"
+        opacity="0.7"
+    />
+
+    <!-- CENTRAL CONTROL -->
+    <rect
+        x="519"
+        y="356"
+        width="39"
+        height="39"
+        fill="#EFC52E"
+        stroke="#171A1B"
+        stroke-width="2"
+    />
+
+    <rect
+        x="529"
+        y="366"
+        width="19"
+        height="13"
+        stroke="#171A1B"
+        stroke-width="1.5"
+    />
+
+    <circle
+        cx="538.5"
+        cy="385"
+        r="2.5"
+        fill="#171A1B"
+    />
+
+    <!-- LABELS -->
+    <g
+        font-family="Arial, sans-serif"
+        fill="#585A58"
+    >
+        <text
+            x="278"
+            y="258"
+            font-size="13"
+        >
+            GARAGE
+        </text>
+
+        <text
+            x="460"
+            y="259"
+            font-size="13"
+        >
+            INTERIOR
+        </text>
+
+        <text
+            x="709"
+            y="403"
+            font-size="13"
+        >
+            GARDEN
+        </text>
+
+        <text
+            x="91"
+            y="526"
+            font-size="13"
+        >
+            DRIVEWAY
+        </text>
+
+        <text
+            x="512"
+            y="342"
+            font-size="11"
+        >
+            CONTROL
+        </text>
+    </g>
+
+    <!-- CAMERA LABELS -->
+    <g
+        font-family="Arial, sans-serif"
+        font-size="10"
+        font-weight="700"
+        fill="#171A1B"
+    >
+        <text x="425" y="420">
+            FRONT
+        </text>
+
+        <text x="218" y="148">
+            APPROACH
+        </text>
+
+        <text x="595" y="137">
+            REAR
+        </text>
+
+        <text x="606" y="382">
+            SIDE
+        </text>
+    </g>
+
+    <!-- ACCENT CORNERS -->
+    <path
+        d="M34 91V34H91"
+        stroke="#C89A27"
+        stroke-width="4"
+    />
+
+    <path
+        d="M809 34H866V91"
+        stroke="#C89A27"
+        stroke-width="4"
+    />
+
+    <path
+        d="M34 529V586H91"
+        stroke="#751F2A"
+        stroke-width="4"
+    />
+
+    <path
+        d="M809 586H866V529"
+        stroke="#C89A27"
+        stroke-width="4"
+    />
+</svg>

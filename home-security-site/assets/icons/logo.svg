@@ -1,0 +1,50 @@
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 96 96"
+    role="img"
+    aria-labelledby="logoTitle"
+>
+    <title id="logoTitle">Home Security</title>
+
+    <path
+        d="M48 7L82 19V43C82 64 68.5 81.5 48 89C27.5 81.5 14 64 14 43V19L48 7Z"
+        fill="#E2B72E"
+    />
+
+    <path
+        d="M48 16L73 25V43C73 58.5 63.8 71.7 48 78C32.2 71.7 23 58.5 23 43V25L48 16Z"
+        fill="#171A1C"
+    />
+
+    <path
+        d="M31 44.5L48 29L65 44.5"
+        fill="none"
+        stroke="#FFFFFF"
+        stroke-width="6"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+    />
+
+    <path
+        d="M35 42V61H61V42"
+        fill="none"
+        stroke="#FFFFFF"
+        stroke-width="6"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+    />
+
+    <circle
+        cx="48"
+        cy="51"
+        r="6.5"
+        fill="#E2B72E"
+    />
+
+    <circle
+        cx="48"
+        cy="51"
+        r="2.5"
+        fill="#171A1C"
+    />
+</svg>

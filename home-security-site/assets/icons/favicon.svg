@@ -1,0 +1,52 @@
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 64 64"
+    role="img"
+    aria-labelledby="faviconTitle"
+>
+    <title id="faviconTitle">SecureNest</title>
+
+    <rect
+        width="64"
+        height="64"
+        rx="15"
+        fill="#171A1C"
+    />
+
+    <path
+        d="M32 8L52 15V29C52 41.5 44.3 52.1 32 57C19.7 52.1 12 41.5 12 29V15L32 8Z"
+        fill="#E2B72E"
+    />
+
+    <path
+        d="M21 30L32 20L43 30"
+        fill="none"
+        stroke="#FFFFFF"
+        stroke-width="4"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+    />
+
+    <path
+        d="M24 28V41H40V28"
+        fill="none"
+        stroke="#FFFFFF"
+        stroke-width="4"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+    />
+
+    <circle
+        cx="32"
+        cy="34"
+        r="4"
+        fill="#171A1C"
+    />
+
+    <circle
+        cx="32"
+        cy="34"
+        r="1.6"
+        fill="#E2B72E"
+    />
+</svg>
