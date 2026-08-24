@@ -1,14 +1,10 @@
-/* =========================================================
-   SECURENEST — HOME PAGE JS V2
-   ========================================================= */
+
 
 (() => {
     "use strict";
 
 
-    /* =====================================================
-       GLOBALS
-       ===================================================== */
+
 
     const prefersReducedMotion =
         window.matchMedia(
@@ -45,12 +41,7 @@
     );
 
 
-    /* =====================================================
-       HERO
-       3 second automatic image change
-       strips + blur + reveal
-       NO ZOOM
-       ===================================================== */
+
 
     function initHero() {
         const hero =
@@ -96,9 +87,7 @@
             false;
 
 
-        /* -----------------------------------------
-           BUILD STRIPS
-           ----------------------------------------- */
+
 
         scenes.forEach(
             (scene) => {
@@ -172,9 +161,7 @@
         );
 
 
-        /* -----------------------------------------
-           COUNTER
-           ----------------------------------------- */
+
 
         const formatNumber =
             (number) =>
@@ -205,9 +192,7 @@
         }
 
 
-        /* -----------------------------------------
-           PROGRESS
-           ----------------------------------------- */
+
 
         function restartProgress() {
             if (!progressBar) {
@@ -220,9 +205,7 @@
             );
 
 
-            /*
-             * Force restart of animation.
-             */
+
 
             void progressBar.offsetWidth;
 
@@ -238,9 +221,7 @@
         }
 
 
-        /* -----------------------------------------
-           CHANGE SCENE
-           ----------------------------------------- */
+
 
         function showScene(
             nextIndex,
@@ -387,9 +368,7 @@
         }
 
 
-        /* -----------------------------------------
-           TIMER
-           ----------------------------------------- */
+
 
         function stopTimer() {
             if (!timer) {
@@ -425,9 +404,7 @@
         }
 
 
-        /* -----------------------------------------
-           INITIAL
-           ----------------------------------------- */
+
 
         scenes.forEach(
             (scene) => {
@@ -448,10 +425,7 @@
             0;
 
 
-        /*
-         * Separate frame ensures the strips
-         * visibly reveal on first load.
-         */
+
 
         window.requestAnimationFrame(
             () => {
@@ -470,9 +444,7 @@
         startTimer();
 
 
-        /* -----------------------------------------
-           PAUSE WHEN TAB IS HIDDEN
-           ----------------------------------------- */
+
 
         document.addEventListener(
             "visibilitychange",
@@ -500,10 +472,7 @@
     }
 
 
-    /* =====================================================
-       SECURITY SCENARIOS SWIPER
-       Expanding active card
-       ===================================================== */
+
 
     function initSecurityScenarios() {
         const slider =
@@ -637,11 +606,7 @@
             );
 
 
-        /*
-         * Active slide changes physical width in CSS.
-         * Swiper needs a small geometry refresh after
-         * its active class changes.
-         */
+
 
         function refreshScenarioGeometry(
             instance
@@ -673,9 +638,7 @@
     }
 
 
-    /* =====================================================
-       HOUSE PROTECTION MAP
-       ===================================================== */
+
 
     function initProtectionMap() {
         const map =
@@ -749,9 +712,7 @@
     }
 
 
-    /* =====================================================
-       ACCESS / ALARM SELECTOR
-       ===================================================== */
+
 
     function initAccessPanel() {
         const panel =
@@ -989,9 +950,7 @@
     }
 
 
-    /* =====================================================
-       SMALL TEXT REPLACEMENT ANIMATION
-       ===================================================== */
+
 
     function animateReplacement(
         element,
@@ -1036,10 +995,7 @@
     }
 
 
-    /* =====================================================
-       PROTECTION MODES
-       Horizontal expanding accordion
-       ===================================================== */
+
 
     function initProtectionModes() {
         const container =
@@ -1202,10 +1158,7 @@
     }
 
 
-    /* =====================================================
-       EDITORIAL TESTIMONIALS
-       Looping Swiper + side text navigation
-       ===================================================== */
+
 
     function initEditorialReviews() {
         const slider =
@@ -1339,10 +1292,7 @@
     }
 
 
-    /* =====================================================
-       VISUAL FAQ
-       Accordion -> image synchronisation
-       ===================================================== */
+
 
     function initVisualFAQ() {
         const accordion =
@@ -1422,10 +1372,7 @@
         );
 
 
-        /*
-         * Also react immediately when user focuses
-         * a question with mouse/keyboard.
-         */
+
 
         $$(
             ".accordion__item",
@@ -1455,9 +1402,7 @@
     }
 
 
-    /* =====================================================
-       CONTACT SERVICE SELECTOR
-       ===================================================== */
+
 
     function initContactServiceSelector() {
         const form =
@@ -1526,11 +1471,7 @@
     }
 
 
-    /* =====================================================
-       LIGHTWEIGHT PHOTO PARALLAX
-       Changes crop position only.
-       Does not zoom images.
-       ===================================================== */
+
 
     function initPhotoParallax() {
         if (
@@ -1660,10 +1601,7 @@
     }
 
 
-    /* =====================================================
-       CAMERA WALL
-       Subtle active-state behaviour
-       ===================================================== */
+
 
     function initCameraWall() {
         const wall =
@@ -1725,10 +1663,7 @@
     }
 
 
-    /* =====================================================
-       PAGE VISIBILITY
-       Used for controlled activity only
-       ===================================================== */
+
 
     function initSectionVisibility() {
         const sections =
@@ -1780,9 +1715,7 @@
     }
 
 
-    /* =====================================================
-       REFRESH AOS
-       ===================================================== */
+
 
     function refreshAOS() {
         if (
@@ -1802,9 +1735,7 @@
     }
 
 
-    /* =====================================================
-       INIT
-       ===================================================== */
+
 
     function init() {
         initHero();

@@ -14,7 +14,7 @@
         alarm zones, sensors, locks and a central access control hub.
     </desc>
 
-    <!-- PROPERTY BOUNDARY -->
+
     <rect
         x="34"
         y="34"
@@ -24,7 +24,7 @@
         stroke-width="2"
     />
 
-    <!-- HOUSE -->
+
     <path
         d="M236 150H656V456H236Z"
         fill="#FAF9F5"
@@ -32,7 +32,7 @@
         stroke-width="3"
     />
 
-    <!-- INTERNAL WALLS -->
+
     <path
         d="M236 290H656"
         stroke="#A6A39B"
@@ -51,7 +51,7 @@
         stroke-width="2"
     />
 
-    <!-- GARAGE -->
+
     <rect
         x="252"
         y="168"
@@ -68,7 +68,7 @@
         stroke-width="1.6"
     />
 
-    <!-- LIVING AREA -->
+
     <rect
         x="444"
         y="168"
@@ -84,7 +84,7 @@
         stroke-width="1.7"
     />
 
-    <!-- LOWER ROOMS -->
+
     <rect
         x="252"
         y="307"
@@ -112,7 +112,7 @@
         stroke-width="1.6"
     />
 
-    <!-- FRONT ENTRANCE -->
+
     <path
         d="M452 456V490"
         stroke="#171A1B"
@@ -131,7 +131,7 @@
         stroke-width="4"
     />
 
-    <!-- FRONT PATH -->
+
     <path
         d="M452 491L419 586H546L508 491Z"
         fill="#F2EFE6"
@@ -139,7 +139,7 @@
         stroke-width="1.7"
     />
 
-    <!-- GARAGE DRIVE -->
+
     <path
         d="M70 586L162 170H236V271H181L112 586Z"
         fill="#F2EFE6"
@@ -154,7 +154,7 @@
         stroke-dasharray="8 10"
     />
 
-    <!-- GARDEN / GATE -->
+
     <rect
         x="687"
         y="101"
@@ -177,7 +177,7 @@
         stroke-width="1.6"
     />
 
-    <!-- SIDE ACCESS -->
+
     <path
         d="M656 310H684V456H656"
         fill="#F2EFE6"
@@ -185,7 +185,7 @@
         stroke-width="1.6"
     />
 
-    <!-- WINDOWS -->
+
     <path
         d="M286 150H338"
         stroke="#C89A27"
@@ -216,7 +216,7 @@
         stroke-width="5"
     />
 
-    <!-- CENTRAL SECURITY HUB -->
+
     <g transform="translate(510 350)">
         <rect
             x="0"
@@ -280,7 +280,7 @@
         />
     </g>
 
-    <!-- FRONT SMART LOCK -->
+
     <g
         transform="translate(456 438)"
         stroke="#171A1B"
@@ -306,7 +306,7 @@
         <path d="M15 29V34" />
     </g>
 
-    <!-- GARAGE CONTACT SENSOR -->
+
     <g transform="translate(242 182)">
         <rect
             x="0"
@@ -329,7 +329,7 @@
         />
     </g>
 
-    <!-- REAR DOOR LOCK -->
+
     <g
         transform="translate(624 184)"
         stroke="#171A1B"
@@ -353,7 +353,7 @@
         />
     </g>
 
-    <!-- SIDE ACCESS SENSOR -->
+
     <g transform="translate(642 390)">
         <rect
             x="0"
@@ -376,7 +376,7 @@
         />
     </g>
 
-    <!-- GATE KEYPAD -->
+
     <g transform="translate(750 410)">
         <rect
             x="0"
@@ -409,7 +409,7 @@
         />
     </g>
 
-    <!-- ALARM ZONES -->
+
     <path
         d="M470 451L543 385"
         stroke="#C89A27"
@@ -445,7 +445,7 @@
         stroke-dasharray="5 7"
     />
 
-    <!-- ACCESS ZONE HIGHLIGHTS -->
+
     <rect
         x="437"
         y="425"
@@ -490,7 +490,7 @@
         opacity="0.5"
     />
 
-    <!-- ALARM SIGNAL LINES -->
+
     <path
         d="M529 342C522 328 522 314 529 301"
         stroke="#C89A27"
@@ -512,7 +512,7 @@
         stroke-linecap="round"
     />
 
-    <!-- ROOM LABELS -->
+
     <g
         font-family="Arial, sans-serif"
         fill="#585A58"
@@ -550,7 +550,7 @@
         </text>
     </g>
 
-    <!-- DEVICE LABELS -->
+
     <g
         font-family="Arial, sans-serif"
         font-size="10"
@@ -582,7 +582,7 @@
         </text>
     </g>
 
-    <!-- STATUS MARKS -->
+
     <g>
         <rect
             x="84"
@@ -611,7 +611,7 @@
         </text>
     </g>
 
-    <!-- ACCENT CORNERS -->
+
     <path
         d="M34 91V34H91"
         stroke="#C89A27"

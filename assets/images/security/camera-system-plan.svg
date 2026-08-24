@@ -14,7 +14,7 @@
         entrances, driveway, rear garden and camera sight lines.
     </desc>
 
-    <!-- PROPERTY -->
+
     <rect
         x="34"
         y="34"
@@ -24,7 +24,7 @@
         stroke-width="2"
     />
 
-    <!-- HOUSE -->
+
     <path
         d="M238 151H655V457H238Z"
         fill="#FAF9F5"
@@ -32,7 +32,7 @@
         stroke-width="3"
     />
 
-    <!-- INTERNAL WALLS -->
+
     <path
         d="M238 291H655"
         stroke="#A6A39B"
@@ -51,7 +51,7 @@
         stroke-width="2"
     />
 
-    <!-- GARAGE -->
+
     <rect
         x="254"
         y="170"
@@ -68,7 +68,7 @@
         stroke-width="1.7"
     />
 
-    <!-- FRONT ENTRY -->
+
     <path
         d="M452 457V490"
         stroke="#171A1B"
@@ -87,7 +87,7 @@
         stroke-width="4"
     />
 
-    <!-- DRIVEWAY -->
+
     <path
         d="M72 586L162 173H238V272H181L112 586Z"
         fill="#F2EFE6"
@@ -102,7 +102,7 @@
         stroke-dasharray="8 10"
     />
 
-    <!-- REAR GARDEN -->
+
     <rect
         x="687"
         y="102"
@@ -131,7 +131,7 @@
         stroke-width="1.7"
     />
 
-    <!-- SIDE PASSAGE -->
+
     <path
         d="M655 310H684V457H655"
         fill="#F2EFE6"
@@ -139,7 +139,7 @@
         stroke-width="1.7"
     />
 
-    <!-- WINDOWS -->
+
     <path
         d="M288 151H337"
         stroke="#C89A27"
@@ -170,7 +170,7 @@
         stroke-width="5"
     />
 
-    <!-- CAMERA COVERAGE CONES -->
+
     <path
         d="M466 448L347 559L530 562Z"
         fill="#EFC52E"
@@ -207,7 +207,7 @@
         stroke-dasharray="7 8"
     />
 
-    <!-- CAMERA 1 FRONT -->
+
     <g
         transform="translate(455 432)"
         stroke="#171A1B"
@@ -232,7 +232,7 @@
         <path d="M7 15V23" />
     </g>
 
-    <!-- CAMERA 2 GARAGE -->
+
     <g
         transform="translate(245 165)"
         stroke="#171A1B"
@@ -257,7 +257,7 @@
         <path d="M7 15V23" />
     </g>
 
-    <!-- CAMERA 3 REAR -->
+
     <g
         transform="translate(608 154)"
         stroke="#171A1B"
@@ -282,7 +282,7 @@
         <path d="M7 15V23" />
     </g>
 
-    <!-- CAMERA 4 SIDE -->
+
     <g
         transform="translate(625 391)"
         stroke="#171A1B"
@@ -307,7 +307,7 @@
         <path d="M7 15V23" />
     </g>
 
-    <!-- CAMERA POSITION MARKS -->
+
     <circle
         cx="467"
         cy="445"
@@ -344,7 +344,7 @@
         opacity="0.40"
     />
 
-    <!-- TECHNICAL CONNECTIONS -->
+
     <path
         d="M467 445L538 375L620 167"
         stroke="#8D8C87"
@@ -367,7 +367,7 @@
         opacity="0.7"
     />
 
-    <!-- CENTRAL CONTROL -->
+
     <rect
         x="519"
         y="356"
@@ -394,7 +394,7 @@
         fill="#171A1B"
     />
 
-    <!-- LABELS -->
+
     <g
         font-family="Arial, sans-serif"
         fill="#585A58"
@@ -440,7 +440,7 @@
         </text>
     </g>
 
-    <!-- CAMERA LABELS -->
+
     <g
         font-family="Arial, sans-serif"
         font-size="10"
@@ -464,7 +464,7 @@
         </text>
     </g>
 
-    <!-- ACCENT CORNERS -->
+
     <path
         d="M34 91V34H91"
         stroke="#C89A27"
