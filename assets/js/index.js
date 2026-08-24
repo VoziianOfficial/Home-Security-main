@@ -41,6 +41,22 @@
     );
 
 
+    const toCssImagePath = path => {
+        if (
+            path.startsWith("/") ||
+            path.includes("://") ||
+            path.startsWith("data:")
+        ) {
+            return path;
+        }
+
+        return path.replace(
+            /^assets\/images\//,
+            "../images/"
+        );
+    };
+
+
 
 
     function initHero() {
@@ -141,7 +157,7 @@
 
                     strip.style.setProperty(
                         "--hero-image",
-                        `url("${image}")`
+                        `url("${toCssImagePath(image)}")`
                     );
 
                     fragment.appendChild(
@@ -517,6 +533,9 @@
                 slider,
                 {
                     loop:
+                        false,
+
+                    rewind:
                         true,
 
                     slidesPerView:

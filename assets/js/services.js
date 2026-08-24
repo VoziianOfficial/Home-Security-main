@@ -239,6 +239,9 @@
                         slider,
                         {
                             loop:
+                                false,
+
+                            rewind:
                                 true,
 
                             slidesPerView:
