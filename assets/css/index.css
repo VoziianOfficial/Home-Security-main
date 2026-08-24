@@ -470,6 +470,37 @@
         forwards;
 }
 
+.hero__actions
+.btn--outline {
+    border-color:
+        rgba(255, 255, 255, 0.42);
+
+    background:
+        rgba(255, 255, 255, 0.1);
+
+    color: var(--white);
+
+    box-shadow:
+        inset 0 0 0 1px rgba(255, 255, 255, 0.08),
+        0 18px 42px rgba(0, 0, 0, 0.22);
+
+    -webkit-backdrop-filter:
+        blur(16px);
+
+    backdrop-filter:
+        blur(16px);
+}
+
+.hero__actions
+.btn--outline:hover,
+.hero__actions
+.btn--outline:focus-visible {
+    border-color: var(--yellow);
+
+    background: var(--yellow);
+    color: var(--black);
+}
+
 
 
 
@@ -3361,6 +3392,14 @@
     .hero__actions
     .btn {
         width: 100%;
+    }
+
+    .hero__actions
+    .btn--round {
+        width: 56px;
+        min-width: 56px;
+
+        align-self: flex-start;
     }
 
     .trust-editorial__media {

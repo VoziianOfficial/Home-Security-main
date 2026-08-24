@@ -380,6 +380,37 @@
         forwards;
 }
 
+.service-hero__actions
+.btn--outline {
+    border-color:
+        rgba(255, 255, 255, 0.42);
+
+    background:
+        rgba(255, 255, 255, 0.1);
+
+    color: var(--white);
+
+    box-shadow:
+        inset 0 0 0 1px rgba(255, 255, 255, 0.08),
+        0 18px 42px rgba(0, 0, 0, 0.22);
+
+    -webkit-backdrop-filter:
+        blur(16px);
+
+    backdrop-filter:
+        blur(16px);
+}
+
+.service-hero__actions
+.btn--outline:hover,
+.service-hero__actions
+.btn--outline:focus-visible {
+    border-color: var(--yellow);
+
+    background: var(--yellow);
+    color: var(--black);
+}
+
 @keyframes serviceHeroText {
 
     to {
@@ -857,6 +888,7 @@
         rgba(255, 255, 255, 0.14);
 
     overflow: hidden;
+    isolation: isolate;
 
     transition:
         background-color
@@ -887,9 +919,44 @@
 
     transform-origin: left;
 
+    z-index: 2;
+
     transition:
         transform
         420ms
+        var(--ease);
+}
+
+.service-capability::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    z-index: 0;
+
+    background-image:
+        linear-gradient(
+            180deg,
+            rgba(7, 9, 10, 0.42),
+            rgba(7, 9, 10, 0.86)
+        ),
+        var(--capability-bg);
+
+    background-size: cover;
+    background-position: center;
+
+    opacity: 0;
+
+    transform:
+        scale(1.05);
+
+    transition:
+        opacity
+        520ms
+        var(--ease),
+        transform
+        700ms
         var(--ease);
 }
 
@@ -899,11 +966,21 @@
     background: var(--black-2);
 }
 
+.service-capability:hover::after {
+    opacity: 1;
+
+    transform:
+        scale(1);
+}
+
 .service-capability:hover::before {
     transform: scaleX(1);
 }
 
 .service-capability__symbol {
+    position: relative;
+    z-index: 1;
+
     width: 58px;
     height: 58px;
 
@@ -945,6 +1022,9 @@
 }
 
 .service-capability__title {
+    position: relative;
+    z-index: 1;
+
     margin:
         32px
         0
@@ -954,6 +1034,9 @@
 }
 
 .service-capability__text {
+    position: relative;
+    z-index: 1;
+
     max-width: 340px;
 
     margin: 0;
@@ -963,6 +1046,16 @@
 
     font-size: 12px;
     line-height: 1.7;
+
+    transition:
+        color
+        var(--transition);
+}
+
+.service-capability:hover
+.service-capability__text {
+    color:
+        rgba(255, 255, 255, 0.78);
 }
 
 
@@ -2508,6 +2601,13 @@
 
     .service-hero__actions .btn {
         width: 100%;
+    }
+
+    .service-hero__actions .btn--round {
+        width: 56px;
+        min-width: 56px;
+
+        align-self: flex-start;
     }
 
     .service-editorial__media {
