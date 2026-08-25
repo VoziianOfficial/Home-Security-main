@@ -2245,6 +2245,9 @@
     transition:
         filter
         520ms
+        var(--ease),
+        transform
+        520ms
         var(--ease);
 }
 
@@ -2270,7 +2273,17 @@
 .camera-wall__cell:hover
 .camera-wall__shade {
     background:
-        rgba(7, 9, 10, 0.22);
+        rgba(7, 9, 10, 0.64);
+}
+
+.camera-wall__cell:hover
+.camera-wall__image {
+    filter:
+        contrast(1.04)
+        brightness(0.72);
+
+    transform:
+        scale(1.035);
 }
 
 .camera-wall__overlay {
@@ -2317,13 +2330,25 @@
         var(--yellow);
 }
 
-.camera-wall__caption {
+.camera-wall__body {
     position: absolute;
 
-    left: 18px;
-    bottom: 18px;
+    left:
+        clamp(18px, 2.2vw, 28px);
+    right:
+        clamp(18px, 2.2vw, 28px);
+    bottom:
+        clamp(18px, 2.2vw, 28px);
 
-    max-width: 260px;
+    z-index: 1;
+
+    display: grid;
+
+    gap: 12px;
+}
+
+.camera-wall__caption {
+    max-width: 310px;
 
     margin: 0;
 
@@ -2343,6 +2368,58 @@
     font-weight: 700;
 
     line-height: 1.05;
+
+    transition:
+        transform
+        520ms
+        var(--ease);
+}
+
+.camera-wall__description {
+    max-width: 420px;
+
+    margin: 0;
+
+    color:
+        rgba(255, 255, 255, 0.78);
+
+    font-size:
+        clamp(
+            12px,
+            0.95vw,
+            14px
+        );
+
+    font-weight: 500;
+
+    line-height: 1.45;
+
+    opacity: 0;
+
+    transform:
+        translateY(12px);
+
+    transition:
+        opacity
+        420ms
+        var(--ease),
+        transform
+        520ms
+        var(--ease);
+}
+
+.camera-wall__cell:hover
+.camera-wall__caption {
+    transform:
+        translateY(-2px);
+}
+
+.camera-wall__cell:hover
+.camera-wall__description {
+    opacity: 1;
+
+    transform:
+        translateY(0);
 }
 
 
@@ -3735,6 +3812,18 @@
     .camera-wall__cell:nth-child(5) {
         grid-column: auto;
         grid-row: auto;
+    }
+
+    .camera-wall__shade {
+        background:
+            rgba(7, 9, 10, 0.58);
+    }
+
+    .camera-wall__description {
+        opacity: 1;
+
+        transform:
+            translateY(0);
     }
 
     .protection-modes__header {
