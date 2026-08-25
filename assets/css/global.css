@@ -485,6 +485,9 @@ p {
 
     display: inline-flex;
 
+    width: fit-content;
+    max-width: 100%;
+
     align-items: center;
     justify-content: center;
 
@@ -502,6 +505,8 @@ p {
     font-weight: 700;
 
     letter-spacing: 0.01em;
+    line-height: 1.2;
+    text-align: center;
 
     cursor: pointer;
 
@@ -2533,6 +2538,33 @@ p {
             1fr;
 
         gap: 18px;
+
+        max-width: 860px;
+
+        justify-items: center;
+
+        margin-inline: auto;
+
+        text-align: center;
+    }
+
+    .section-heading__title {
+        max-width:
+            min(
+                100%,
+                760px
+            );
+
+        margin-inline: auto;
+
+        text-align: center;
+        text-wrap: balance;
+    }
+
+    .section-heading__copy {
+        margin-inline: auto;
+
+        text-align: center;
     }
 
     .footer-main {
