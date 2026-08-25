@@ -765,15 +765,30 @@
                     "vertical",
 
                 loop:
+                    false,
+
+                rewind:
                     true,
 
                 slidesPerView:
                     1,
 
+                spaceBetween:
+                    0,
+
                 speed:
                     prefersReducedMotion
                         ? 0
                         : 900,
+
+                observer:
+                    false,
+
+                observeParents:
+                    false,
+
+                resizeObserver:
+                    true,
 
                 allowTouchMove:
                     !prefersReducedMotion,
