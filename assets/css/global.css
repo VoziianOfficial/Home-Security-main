@@ -2618,6 +2618,17 @@ body:not(.aos-ready) [data-aos],
             clamp(26px, 7.5vw, 32px);
     }
 
+    .site-header {
+        position: fixed;
+
+        top: 0;
+        right: 0;
+        left: 0;
+
+        transform:
+            translate3d(0, 0, 0);
+    }
+
     .container {
         width:
             min(
