@@ -1996,7 +1996,7 @@
 .service-final__shell {
     position: relative;
 
-    min-height: 410px;
+    min-height: 318px;
 
     display: grid;
 
@@ -2006,22 +2006,44 @@
 
     align-items: center;
 
-    gap: 48px;
+    gap: 36px;
 
     padding:
         clamp(
-            44px,
-            5.5vw,
-            76px
+            34px,
+            4.2vw,
+            58px
         );
 
     border:
         1px solid
-        rgba(255, 255, 255, 0.12);
+        rgba(255, 255, 255, 0.16);
 
-    background: var(--black-2);
+    border-radius: 24px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.075),
+            rgba(255, 255, 255, 0.018)
+        ),
+        var(--black-2);
+
+    box-shadow:
+        0 26px 70px rgba(0, 0, 0, 0.34),
+        inset 0 1px 0 rgba(255, 255, 255, 0.12);
 
     overflow: hidden;
+    isolation: isolate;
+
+    transform:
+        translateY(0);
+
+    transition:
+        border-color var(--transition),
+        box-shadow var(--transition),
+        transform var(--transition),
+        background var(--transition);
 }
 
 .service-final__shell::before {
@@ -2029,17 +2051,27 @@
 
     position: absolute;
 
-    right: -90px;
-    top: -130px;
+    right: -84px;
+    top: -128px;
 
-    width: 340px;
-    height: 340px;
+    width: 320px;
+    height: 320px;
 
     border:
         1px solid
-        rgba(239, 197, 46, 0.12);
+        rgba(239, 197, 46, 0.16);
 
-    transform: rotate(16deg);
+    border-radius: 34px;
+
+    opacity: 0.78;
+
+    transform:
+        rotate(16deg)
+        translate3d(0, 0, 0);
+
+    transition:
+        opacity var(--transition),
+        transform var(--transition);
 }
 
 .service-final__shell::after {
@@ -2047,31 +2079,87 @@
 
     position: absolute;
 
-    right: 5px;
-    top: -24px;
+    right: 8px;
+    top: -28px;
 
-    width: 170px;
-    height: 170px;
+    width: 158px;
+    height: 158px;
 
     border:
         1px solid
-        rgba(239, 197, 46, 0.18);
+        rgba(239, 197, 46, 0.24);
 
-    transform: rotate(-8deg);
+    border-radius: 24px;
+
+    background:
+        rgba(239, 197, 46, 0.035);
+
+    transform:
+        rotate(-8deg)
+        translate3d(0, 0, 0);
+
+    transition:
+        background var(--transition),
+        transform var(--transition);
+}
+
+.service-final__shell:hover {
+    border-color:
+        rgba(239, 197, 46, 0.36);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(239, 197, 46, 0.12),
+            rgba(255, 255, 255, 0.035)
+        ),
+        var(--black-2);
+
+    box-shadow:
+        0 34px 86px rgba(0, 0, 0, 0.42),
+        0 0 0 1px rgba(239, 197, 46, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.16);
+
+    transform:
+        translateY(-6px);
+}
+
+.service-final__shell:hover::before {
+    opacity: 1;
+
+    transform:
+        rotate(20deg)
+        translate3d(-10px, 8px, 0);
+}
+
+.service-final__shell:hover::after {
+    background:
+        rgba(239, 197, 46, 0.07);
+
+    transform:
+        rotate(-3deg)
+        translate3d(-8px, 10px, 0);
 }
 
 .service-final__content {
     position: relative;
 
-    max-width: 860px;
+    max-width: none;
 
     z-index: 2;
 }
 
 .service-final__title {
-    max-width: 820px;
+    max-width: none;
 
-    margin-bottom: 18px;
+    margin-bottom: 14px;
+
+    font-size:
+        clamp(34px, 3.85vw, 58px);
+
+    line-height: 0.95;
+    letter-spacing: -0.045em;
+    white-space: nowrap;
 }
 
 .service-final__copy {
@@ -2087,6 +2175,15 @@
     position: relative;
 
     z-index: 3;
+
+    transition:
+        transform var(--transition);
+}
+
+.service-final__shell:hover
+.service-final__action {
+    transform:
+        translateX(3px);
 }
 
 
@@ -2575,8 +2672,14 @@
         grid-template-columns: 1fr;
 
         padding:
-            38px
+            32px
             24px;
+    }
+
+    .service-final__title {
+        font-size: 36px;
+
+        white-space: normal;
     }
 
     .service-final__action {
@@ -2665,5 +2768,14 @@
         filter: none;
 
         transform: none;
+    }
+
+    .service-final__shell,
+    .service-final__shell::before,
+    .service-final__shell::after,
+    .service-final__action {
+        transform: none;
+
+        transition: none;
     }
 }

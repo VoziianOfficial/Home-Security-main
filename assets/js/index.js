@@ -1492,6 +1492,221 @@
 
 
 
+    function initTrustMetrics() {
+        const section =
+            $(".trust-metrics");
+
+        if (!section) {
+            return;
+        }
+
+
+        const tabs =
+            $$(
+                "[data-tab-trigger]",
+                section
+            );
+
+        const panes =
+            $$(
+                "[data-tab-panel]",
+                section
+            );
+
+
+        if (tabs.length) {
+            tabs.forEach(
+                (tab) => {
+                    tab.addEventListener(
+                        "click",
+                        () => {
+                            const target =
+                                tab.dataset
+                                    .tabTrigger;
+
+                            if (
+                                tab.classList.contains(
+                                    "is-active"
+                                )
+                            ) {
+                                return;
+                            }
+
+
+                            tabs.forEach(
+                                (item) => {
+                                    const isMatch =
+                                        item ===
+                                        tab;
+
+                                    item.classList.toggle(
+                                        "is-active",
+                                        isMatch
+                                    );
+
+                                    item.setAttribute(
+                                        "aria-selected",
+                                        isMatch ?
+                                            "true" :
+                                            "false"
+                                    );
+                                }
+                            );
+
+
+                            panes.forEach(
+                                (pane) => {
+                                    const isMatch =
+                                        pane.dataset
+                                            .tabPanel ===
+                                        target;
+
+                                    pane.classList.toggle(
+                                        "is-active",
+                                        isMatch
+                                    );
+
+                                    pane.hidden =
+                                        !isMatch;
+                                }
+                            );
+                        }
+                    );
+                }
+            );
+        }
+
+
+        const counters =
+            $$(
+                "[data-count-target]",
+                section
+            );
+
+        if (!counters.length) {
+            return;
+        }
+
+
+        let hasCounted =
+            false;
+
+        function runCounters() {
+            if (hasCounted) {
+                return;
+            }
+
+            hasCounted =
+                true;
+
+
+            counters.forEach(
+                (counter) => {
+                    const target =
+                        parseInt(
+                            counter.dataset
+                                .countTarget,
+                            10
+                        ) || 0;
+
+                    const suffix =
+                        counter.dataset
+                            .countSuffix ||
+                        "";
+
+
+                    if (prefersReducedMotion) {
+                        counter.textContent =
+                            `${target}${suffix}`;
+
+                        return;
+                    }
+
+
+                    const duration =
+                        1400;
+
+                    const startTime =
+                        performance.now();
+
+                    function tick(
+                        now
+                    ) {
+                        const progress =
+                            clamp(
+                                (now - startTime) /
+                                    duration,
+                                0,
+                                1
+                            );
+
+                        const eased =
+                            1 -
+                            Math.pow(
+                                1 - progress,
+                                3
+                            );
+
+                        const value =
+                            Math.round(
+                                eased * target
+                            );
+
+                        counter.textContent =
+                            `${value}${suffix}`;
+
+
+                        if (progress < 1) {
+                            window.requestAnimationFrame(
+                                tick
+                            );
+                        }
+                    }
+
+                    window.requestAnimationFrame(
+                        tick
+                    );
+                }
+            );
+        }
+
+
+        if (
+            !("IntersectionObserver" in window)
+        ) {
+            runCounters();
+
+            return;
+        }
+
+
+        const counterObserver =
+            new IntersectionObserver(
+                (entries, observer) => {
+                    entries.forEach(
+                        (entry) => {
+                            if (entry.isIntersecting) {
+                                runCounters();
+
+                                observer.disconnect();
+                            }
+                        }
+                    );
+                },
+                {
+                    threshold:
+                        0.35
+                }
+            );
+
+        counterObserver.observe(
+            $(".trust-metrics__stats", section)
+        );
+    }
+
+
+
+
     function initPhotoParallax() {
         if (
             prefersReducedMotion ||
@@ -1504,7 +1719,8 @@
         const images =
             [
                 $(".trust-editorial__main-photo"),
-                $(".camera-wall__cell--large .camera-wall__image")
+                $(".camera-wall__cell--large .camera-wall__image"),
+                $(".trust-metrics__bg-photo")
             ].filter(Boolean);
 
 
@@ -1772,6 +1988,8 @@
         initVisualFAQ();
 
         initContactServiceSelector();
+
+        initTrustMetrics();
 
         initPhotoParallax();
 
