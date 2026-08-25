@@ -1061,24 +1061,27 @@
             return;
         }
 
+        body.classList.add(
+            "aos-ready"
+        );
 
         window.AOS.init({
             duration:
                 prefersReducedMotion
                     ? 0
-                    : 760,
+                    : 700,
 
             easing:
                 "ease-out-cubic",
 
             once:
-                false,
-
-            mirror:
                 true,
 
+            mirror:
+                false,
+
             offset:
-                42,
+                50,
 
             delay:
                 0,
@@ -1678,36 +1681,6 @@
     }
 
 
-
-
-    function refreshAOSAfterLoad() {
-        window.addEventListener(
-            "load",
-            () => {
-                if (
-                    typeof window.AOS ===
-                    "undefined"
-                ) {
-                    return;
-                }
-
-
-                window.setTimeout(
-                    () => {
-                        window.AOS.refreshHard();
-                    },
-                    120
-                );
-            },
-            {
-                once: true
-            }
-        );
-    }
-
-
-
-
     function init() {
         applySiteConfig();
 
@@ -1734,8 +1707,6 @@
         secureExternalLinks();
 
         initAOS();
-
-        refreshAOSAfterLoad();
     }
 
 

@@ -349,8 +349,6 @@
                         refreshExpandedSlider(
                             swiper
                         );
-
-                        refreshAOS();
                     },
                     160
                 );
@@ -1085,70 +1083,6 @@
     }
 
 
-
-
-    function initResponsiveRefresh() {
-        let previousWidth =
-            window.innerWidth;
-
-
-        window.addEventListener(
-            "resize",
-            () => {
-                const currentWidth =
-                    window.innerWidth;
-
-
-                if (
-                    Math.abs(
-                        currentWidth -
-                        previousWidth
-                    ) < 30
-                ) {
-                    return;
-                }
-
-
-                previousWidth =
-                    currentWidth;
-
-
-                if (
-                    typeof window.AOS !==
-                    "undefined"
-                ) {
-                    window.AOS.refresh();
-                }
-            },
-            {
-                passive: true
-            }
-        );
-    }
-
-
-
-
-    function refreshAOS() {
-        if (
-            typeof window.AOS ===
-            "undefined"
-        ) {
-            return;
-        }
-
-
-        window.setTimeout(
-            () => {
-                window.AOS.refreshHard();
-            },
-            150
-        );
-    }
-
-
-
-
     function init() {
         initServiceHero();
 
@@ -1165,10 +1099,6 @@
         initCapabilities();
 
         initSectionVisibility();
-
-        initResponsiveRefresh();
-
-        refreshAOS();
     }
 
 

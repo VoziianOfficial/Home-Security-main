@@ -1755,28 +1755,6 @@
     }
 
 
-
-
-    function refreshAOS() {
-        if (
-            typeof window.AOS ===
-            "undefined"
-        ) {
-            return;
-        }
-
-
-        window.setTimeout(
-            () => {
-                window.AOS.refreshHard();
-            },
-            180
-        );
-    }
-
-
-
-
     function init() {
         initHero();
 
@@ -1801,8 +1779,6 @@
         initCameraWall();
 
         initSectionVisibility();
-
-        refreshAOS();
     }
 
 
