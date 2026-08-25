@@ -1905,6 +1905,237 @@
 
 
 
+.explore-departments {
+    background: var(--paper);
+}
+
+.explore-departments__row {
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap:
+        clamp(
+            16px,
+            2.4vw,
+            32px
+        );
+}
+
+.explore-departments__item {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+}
+
+.explore-departments__circle {
+    position: relative;
+
+    width:
+        clamp(
+            132px,
+            13vw,
+            208px
+        );
+
+    height:
+        clamp(
+            132px,
+            13vw,
+            208px
+        );
+
+    margin-bottom: 22px;
+}
+
+.explore-departments__mask {
+    position: absolute;
+    inset: 0;
+
+    border-radius: 50%;
+
+    background: var(--soft-gray);
+
+    overflow: hidden;
+
+    transition:
+        transform
+        var(--transition),
+        box-shadow
+        var(--transition);
+}
+
+.explore-departments__item:hover
+.explore-departments__mask,
+.explore-departments__item:focus-visible
+.explore-departments__mask {
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        var(--shadow-light);
+}
+
+.explore-departments__photo {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    opacity: 0;
+
+    transform: scale(1.08);
+
+    transition:
+        opacity
+        var(--transition),
+        transform
+        480ms
+        var(--ease);
+}
+
+.explore-departments__item:hover
+.explore-departments__photo,
+.explore-departments__item:focus-visible
+.explore-departments__photo {
+    opacity: 1;
+
+    transform: scale(1);
+}
+
+.explore-departments__shade {
+    position: absolute;
+    inset: 0;
+
+    background:
+        rgba(13, 15, 16, 0.32);
+
+    opacity: 0;
+
+    transition:
+        opacity
+        var(--transition);
+}
+
+.explore-departments__item:hover
+.explore-departments__shade,
+.explore-departments__item:focus-visible
+.explore-departments__shade {
+    opacity: 1;
+}
+
+.explore-departments__icon {
+    position: relative;
+
+    z-index: 1;
+
+    display: grid;
+    place-items: center;
+
+    width: 100%;
+    height: 100%;
+
+    color: var(--black);
+
+    transition:
+        color
+        var(--transition);
+}
+
+.explore-departments__item:hover
+.explore-departments__icon,
+.explore-departments__item:focus-visible
+.explore-departments__icon {
+    color: var(--white);
+}
+
+.explore-departments__icon svg {
+    width: 42%;
+    height: 42%;
+
+    stroke-width: 1.4;
+}
+
+.explore-departments__chip {
+    position: absolute;
+
+    right: -6px;
+    bottom: 14%;
+
+    z-index: 2;
+
+    border-radius: 4px;
+
+    padding:
+        5px
+        10px;
+
+    background: var(--black);
+
+    opacity: 0;
+
+    color: var(--white);
+
+    font-size: 10px;
+    font-weight: 650;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+
+    transform:
+        translateY(6px);
+
+    transition:
+        opacity
+        var(--transition),
+        transform
+        var(--transition);
+}
+
+.explore-departments__item:hover
+.explore-departments__chip,
+.explore-departments__item:focus-visible
+.explore-departments__chip {
+    opacity: 1;
+
+    transform:
+        translateY(0);
+}
+
+.explore-departments__name {
+    margin-bottom: 4px;
+
+    font-family: var(--font-accent);
+    font-size: 19px;
+    font-weight: 500;
+
+    transition:
+        color
+        var(--transition);
+}
+
+.explore-departments__item:hover
+.explore-departments__name,
+.explore-departments__item:focus-visible
+.explore-departments__name {
+    color: var(--mustard);
+}
+
+.explore-departments__meta {
+    color: var(--gray-dark);
+
+    font-size: 12px;
+}
+
+
+
+
 .camera-wall {
     background:
         var(--paper);
@@ -3368,6 +3599,13 @@
         margin-left: 0;
     }
 
+    .explore-departments__row {
+        grid-template-columns:
+            repeat(3, 1fr);
+
+        row-gap: 34px;
+    }
+
     .camera-wall__grid {
         grid-template-columns:
             1fr;
@@ -3516,6 +3754,15 @@
         line-height: 1.7;
 
         text-align: left;
+    }
+
+    .explore-departments__row {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .explore-departments__chip {
+        display: none;
     }
 
     .camera-wall__grid {
