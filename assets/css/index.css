@@ -976,6 +976,8 @@
     height: 100%;
 
     object-fit: cover;
+
+    border-radius: 14px;
 }
 
 .trust-editorial__detail-photo {
@@ -988,6 +990,8 @@
     height: 46%;
 
     object-fit: cover;
+
+    border-radius: 16px;
 
     border:
         8px solid
@@ -1146,6 +1150,8 @@
     position: relative;
 
     height: 485px;
+
+    border-radius: 16px;
 
     overflow: hidden;
 
@@ -1609,6 +1615,8 @@
     box-shadow:
         var(--shadow-light);
 
+    border-radius: 14px;
+
     overflow: hidden;
 }
 
@@ -1940,6 +1948,8 @@
 
 .camera-wall__cell {
     position: relative;
+
+    border-radius: 14px;
 
     overflow: hidden;
 
@@ -2548,6 +2558,8 @@
 
     object-fit: cover;
 
+    border-radius: 14px;
+
     border:
         1px solid
         rgba(255, 255, 255, 0.14);
@@ -2586,6 +2598,8 @@
     position: relative;
 
     min-height: 520px;
+
+    border-radius: 14px;
 
     background:
         var(--black);
@@ -3938,6 +3952,8 @@
     height: 168px;
 
     object-fit: cover;
+
+    border-radius: 14px;
 
     border:
         1px solid
