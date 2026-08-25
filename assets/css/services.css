@@ -4,7 +4,7 @@
 
 
 .service-page {
-    background: var(--white);
+    background: var(--paper);
 }
 
 .service-page .section {
@@ -670,7 +670,7 @@
 
 
 .service-editorial {
-    background: var(--white);
+    background: var(--paper);
 }
 
 .service-editorial__layout {
@@ -863,29 +863,31 @@
         );
 
     border-top:
-        1px solid
-        rgba(255, 255, 255, 0.14);
+        2px solid
+        rgba(255, 255, 255, 0.22);
 
     border-bottom:
-        1px solid
-        rgba(255, 255, 255, 0.14);
+        2px solid
+        rgba(255, 255, 255, 0.22);
 }
 
 .service-capability {
     position: relative;
 
-    min-height: 270px;
+    min-height: 218px;
 
     display: flex;
     flex-direction: column;
 
     padding:
+        30px
+        100px
         26px
         28px;
 
     border-right:
-        1px solid
-        rgba(255, 255, 255, 0.14);
+        2px solid
+        rgba(255, 255, 255, 0.22);
 
     overflow: hidden;
     isolation: isolate;
@@ -893,7 +895,11 @@
     transition:
         background-color
         var(--transition),
-        padding-top
+        border-color
+        var(--transition),
+        box-shadow
+        var(--transition),
+        transform
         var(--transition);
 }
 
@@ -961,9 +967,17 @@
 }
 
 .service-capability:hover {
-    padding-top: 20px;
-
     background: var(--black-2);
+
+    border-color:
+        rgba(239, 197, 46, 0.34);
+
+    box-shadow:
+        0 22px 52px rgba(0, 0, 0, 0.28),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+
+    transform:
+        translateY(-4px);
 }
 
 .service-capability:hover::after {
@@ -978,28 +992,47 @@
 }
 
 .service-capability__symbol {
-    position: relative;
+    position: absolute;
+
+    right: 24px;
+    top: 24px;
+
     z-index: 1;
 
-    width: 58px;
-    height: 58px;
+    width: 54px;
+    height: 54px;
 
     display: grid;
     place-items: center;
 
-    margin-bottom: auto;
-
     color: var(--yellow);
 
+    border-top:
+        2px solid
+        rgba(239, 197, 46, 0.52);
+
+    border-right:
+        2px solid
+        rgba(239, 197, 46, 0.52);
+
     border-left:
-        1px solid
-        rgba(239, 197, 46, 0.48);
+        0;
 
     border-bottom:
-        1px solid
-        rgba(239, 197, 46, 0.48);
+        0;
+
+    border-radius:
+        0
+        10px
+        0
+        0;
+
+    background:
+        rgba(239, 197, 46, 0.045);
 
     transition:
+        background
+        var(--transition),
         transform
         var(--transition);
 }
@@ -1008,14 +1041,14 @@
 .service-capability__symbol {
     transform:
         translate(
-            5px,
+            4px,
             -4px
         );
 }
 
 .service-capability__symbol svg {
-    width: 34px;
-    height: 34px;
+    width: 32px;
+    height: 32px;
 
     stroke: currentColor;
     stroke-width: 1.3;
@@ -1026,11 +1059,13 @@
     z-index: 1;
 
     margin:
-        32px
+        auto
         0
         9px;
 
     color: var(--white);
+
+    white-space: nowrap;
 }
 
 .service-capability__text {
@@ -1257,7 +1292,7 @@
 
 
 .service-system {
-    background: var(--white);
+    background: var(--paper);
 }
 
 .service-system__layout {
@@ -1690,7 +1725,7 @@
 
 
 .service-approach {
-    background: var(--milk);
+    background: var(--paper);
 }
 
 .service-approach__layout {
@@ -1858,7 +1893,7 @@
 
 
 .service-visual-faq {
-    background: var(--white);
+    background: var(--paper);
 }
 
 .service-visual-faq__layout {
@@ -2443,17 +2478,21 @@
     }
 
     .service-capability {
-        min-height: 190px;
+        min-height: 176px;
 
         border-right: 0;
 
         border-bottom:
-            1px solid
-            rgba(255, 255, 255, 0.14);
+            2px solid
+            rgba(255, 255, 255, 0.22);
     }
 
     .service-capability:last-child {
         border-bottom: 0;
+    }
+
+    .service-capability__title {
+        white-space: normal;
     }
 
     .service-capabilities__header {
@@ -2768,6 +2807,13 @@
         filter: none;
 
         transform: none;
+    }
+
+    .service-capability,
+    .service-capability__symbol {
+        transform: none;
+
+        transition: none;
     }
 
     .service-final__shell,

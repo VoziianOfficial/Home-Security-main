@@ -733,283 +733,73 @@
 
 
 
-    function initAccessPanel() {
-        const panel =
-            $(".access-split__panel");
+    function initAccessSplit() {
+        const slider =
+            $(".access-split__slider");
 
-        if (!panel) {
-            return;
-        }
-
-
-        const buttons =
-            $$(
-                "[data-access-tab]",
-                panel
-            );
-
-        const title =
-            $(
-                "[data-access-preview-title]",
-                panel
-            );
-
-        const text =
-            $(
-                "[data-access-preview-text]",
-                panel
-            );
-
-        const icon =
-            $(
-                "[data-access-preview-icon]",
-                panel
-            );
-
-
-        if (!buttons.length) {
-            return;
-        }
-
-
-        const content = {
-            entry: {
-                title:
-                    "Entry awareness",
-
-                text:
-                    "Focus protection around the places people actually enter and leave.",
-
-                icon: `
-                    <path
-                        d="M18 55V10H46V55"
-                        stroke="currentColor"
-                    />
-                    <path
-                        d="M25 55V18H40V55"
-                        stroke="currentColor"
-                    />
-                    <circle
-                        cx="36"
-                        cy="36"
-                        r="2"
-                        fill="currentColor"
-                    />
-                `
-            },
-
-            alarm: {
-                title:
-                    "Meaningful alerts",
-
-                text:
-                    "Bring attention to important entry events without creating constant unnecessary noise.",
-
-                icon: `
-                    <path
-                        d="M32 9C22 9 15 17 15 27V35L9 45H55L49 35V27C49 17 42 9 32 9Z"
-                        stroke="currentColor"
-                        stroke-linejoin="round"
-                    />
-                    <path
-                        d="M25 51C27 55 29.5 57 32 57C34.5 57 37 55 39 51"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                    />
-                `
-            },
-
-            control: {
-                title:
-                    "Controlled access",
-
-                text:
-                    "Manage important doors and access points while keeping everyday entry straightforward.",
-
-                icon: `
-                    <path
-                        d="M19 29V21C19 13.8 24.8 8 32 8C39.2 8 45 13.8 45 21V29"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                    />
-                    <rect
-                        x="14"
-                        y="28"
-                        width="36"
-                        height="28"
-                        rx="3"
-                        stroke="currentColor"
-                    />
-                    <circle
-                        cx="32"
-                        cy="40"
-                        r="4"
-                        stroke="currentColor"
-                    />
-                    <path
-                        d="M32 44V49"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                    />
-                `
-            }
-        };
-
-
-        function activateTab(
-            button
+        if (
+            !slider ||
+            typeof window.Swiper ===
+                "undefined"
         ) {
-            const key =
-                button.dataset.accessTab;
+            return;
+        }
 
 
-            const item =
-                content[key];
+        const frame =
+            slider.closest(
+                ".access-split__frame"
+            );
 
-
-            if (!item) {
-                return;
-            }
-
-
-            buttons.forEach(
-                (otherButton) => {
-                    const active =
-                        otherButton ===
-                        button;
-
-
-                    otherButton.classList.toggle(
-                        "is-active",
-                        active
-                    );
-
-
-                    otherButton.setAttribute(
-                        "aria-selected",
-                        active
-                            ? "true"
-                            : "false"
-                    );
-                }
+        const pagination =
+            $(
+                ".access-split__pagination",
+                frame
             );
 
 
-            if (title) {
-                animateReplacement(
-                    title,
-                    item.title
-                );
-            }
+        new window.Swiper(
+            slider,
+            {
+                direction:
+                    "vertical",
 
+                loop:
+                    true,
 
-            if (text) {
-                animateReplacement(
-                    text,
-                    item.text
-                );
-            }
+                slidesPerView:
+                    1,
 
-
-            if (icon) {
-                icon.style.opacity =
-                    "0";
-
-                icon.style.transform =
-                    "translateY(6px)";
-
-
-                window.setTimeout(
-                    () => {
-                        icon.innerHTML =
-                            item.icon;
-
-                        icon.style.opacity =
-                            "1";
-
-                        icon.style.transform =
-                            "translateY(0)";
-                    },
+                speed:
                     prefersReducedMotion
                         ? 0
-                        : 130
-                );
+                        : 900,
+
+                allowTouchMove:
+                    !prefersReducedMotion,
+
+                autoplay:
+                    prefersReducedMotion
+                        ? false
+                        : {
+                            delay:
+                                4600,
+
+                            disableOnInteraction:
+                                false,
+
+                            pauseOnMouseEnter:
+                                true
+                        },
+
+                pagination: {
+                    el:
+                        pagination,
+
+                    clickable:
+                        true
+                }
             }
-        }
-
-
-        buttons.forEach(
-            (button) => {
-                button.setAttribute(
-                    "role",
-                    "tab"
-                );
-
-
-                button.setAttribute(
-                    "aria-selected",
-                    button.classList.contains(
-                        "is-active"
-                    )
-                        ? "true"
-                        : "false"
-                );
-
-
-                button.addEventListener(
-                    "click",
-                    () => {
-                        activateTab(
-                            button
-                        );
-                    }
-                );
-            }
-        );
-    }
-
-
-
-
-    function animateReplacement(
-        element,
-        value
-    ) {
-        if (!element) {
-            return;
-        }
-
-
-        if (prefersReducedMotion) {
-            element.textContent =
-                value;
-
-            return;
-        }
-
-
-        element.style.transition =
-            "opacity 160ms ease, transform 220ms cubic-bezier(0.22, 1, 0.36, 1)";
-
-        element.style.opacity =
-            "0";
-
-        element.style.transform =
-            "translateY(7px)";
-
-
-        window.setTimeout(
-            () => {
-                element.textContent =
-                    value;
-
-                element.style.opacity =
-                    "1";
-
-                element.style.transform =
-                    "translateY(0)";
-            },
-            150
         );
     }
 
@@ -1979,7 +1769,7 @@
 
         initProtectionMap();
 
-        initAccessPanel();
+        initAccessSplit();
 
         initProtectionModes();
 

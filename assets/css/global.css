@@ -234,7 +234,7 @@ p {
 }
 
 .section--white {
-    background: var(--white);
+    background: var(--paper);
 }
 
 .section--paper {
@@ -243,7 +243,7 @@ p {
 
 .section--milk,
 .section--light {
-    background: var(--milk);
+    background: var(--paper);
 }
 
 .section--dark {
