@@ -426,17 +426,9 @@
     position: relative;
 
     padding:
-        clamp(
-            62px,
-            6vw,
-            94px
-        )
+        var(--section-padding-block)
         0
-        clamp(
-            76px,
-            7vw,
-            110px
-        );
+        var(--section-padding-block);
 
     background: var(--paper);
 }
@@ -1150,11 +1142,7 @@
     padding:
         0
         0
-        clamp(
-            70px,
-            7vw,
-            102px
-        );
+        var(--section-padding-block);
 
     background: var(--paper);
 }
@@ -1453,10 +1441,6 @@
 
     .legal-hero__grid-line {
         display: none;
-    }
-
-    .legal-content {
-        padding-top: 48px;
     }
 
     .legal-article {

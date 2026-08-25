@@ -31,6 +31,8 @@
 
     --header-info-height: 34px;
     --header-main-height: 82px;
+    --section-padding-block:
+        clamp(40px, 3.35vw, 48px);
 
     --border-dark:
         rgba(255, 255, 255, 0.12);
@@ -225,7 +227,7 @@ p {
     position: relative;
 
     padding:
-        clamp(70px, 6.2vw, 102px)
+        var(--section-padding-block)
         0;
 
     overflow: hidden;
@@ -2502,6 +2504,9 @@ p {
     :root {
         --header-main-height:
             74px;
+
+        --section-padding-block:
+            clamp(34px, 4.5vw, 40px);
     }
 
     .header-main__inner {
@@ -2547,6 +2552,9 @@ p {
 
         --header-main-height:
             68px;
+
+        --section-padding-block:
+            clamp(26px, 7.5vw, 32px);
     }
 
     .container {
@@ -2555,11 +2563,6 @@ p {
                 calc(100% - 28px),
                 var(--container)
             );
-    }
-
-    .section {
-        padding:
-            62px 0;
     }
 
     h1 {
