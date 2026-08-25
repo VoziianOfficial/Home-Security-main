@@ -1938,6 +1938,13 @@
 
 .explore-departments {
     background: var(--paper);
+
+    padding-block:
+        clamp(
+            28px,
+            3.2vw,
+            40px
+        );
 }
 
 .explore-departments__row {
@@ -1948,9 +1955,9 @@
 
     gap:
         clamp(
-            16px,
-            2.4vw,
-            32px
+            12px,
+            1.8vw,
+            24px
         );
 }
 
@@ -1968,19 +1975,19 @@
 
     width:
         clamp(
-            132px,
-            13vw,
-            208px
+            112px,
+            10.5vw,
+            164px
         );
 
     height:
         clamp(
-            132px,
-            13vw,
-            208px
+            112px,
+            10.5vw,
+            164px
         );
 
-    margin-bottom: 22px;
+    margin-bottom: 14px;
 }
 
 .explore-departments__mask {
@@ -2105,8 +2112,8 @@
     border-radius: 4px;
 
     padding:
-        5px
-        10px;
+        4px
+        8px;
 
     background: var(--black);
 
@@ -2114,7 +2121,7 @@
 
     color: var(--white);
 
-    font-size: 10px;
+    font-size: 9px;
     font-weight: 650;
     letter-spacing: 0.02em;
     white-space: nowrap;
@@ -2140,10 +2147,10 @@
 }
 
 .explore-departments__name {
-    margin-bottom: 4px;
+    margin-bottom: 2px;
 
     font-family: var(--font-accent);
-    font-size: 19px;
+    font-size: 17px;
     font-weight: 500;
 
     transition:
@@ -2161,7 +2168,7 @@
 .explore-departments__meta {
     color: var(--gray-dark);
 
-    font-size: 12px;
+    font-size: 11px;
 }
 
 
@@ -3962,7 +3969,35 @@
         grid-template-columns:
             repeat(3, 1fr);
 
-        row-gap: 34px;
+        gap:
+            24px
+            12px;
+    }
+
+    .explore-departments__circle {
+        width:
+            clamp(
+                92px,
+                24vw,
+                124px
+            );
+
+        height:
+            clamp(
+                92px,
+                24vw,
+                124px
+            );
+
+        margin-bottom: 10px;
+    }
+
+    .explore-departments__name {
+        font-size: 16px;
+    }
+
+    .explore-departments__meta {
+        font-size: 10px;
     }
 
     .camera-wall__grid {
@@ -4132,6 +4167,26 @@
     .explore-departments__row {
         grid-template-columns:
             repeat(2, 1fr);
+
+        gap:
+            22px
+            10px;
+    }
+
+    .explore-departments__circle {
+        width:
+            clamp(
+                86px,
+                28vw,
+                112px
+            );
+
+        height:
+            clamp(
+                86px,
+                28vw,
+                112px
+            );
     }
 
     .explore-departments__chip {
